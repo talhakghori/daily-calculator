@@ -66,3 +66,52 @@ button:hover {
 .settings-button:hover {
     background-color: #515151;
 }
+
+.calculator {
+    width: 350px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.calculator label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.calculator input,
+.calculator select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+#calculate-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.results {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.results p {
+    margin: 10px 0;
+}
+
+.final-price {
+    font-size: 20px;
+}
+
+#error-message {
+    color: #b91c1c;
+    margin-top: 15px;
+}
