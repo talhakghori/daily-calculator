@@ -8,12 +8,107 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
+
 <body>
     <main>
         <h1>Conversions</h1>
+
+        <div class="conversion-option">
+            <button id="metric-button">Metric</button>
+            <button id="imperial-button">Imperial</button>
+        </div>
+
+
+        <!-- Unit conversion inputs and outputs -->
+        <div class="conversion-table">
+
+            <div class="conversion-row">
+                <div>
+                    <label for="km">Kilometers</label>
+                    <input type="number" id="km" step="0.1">
+                </div>
+
+                <div>
+                    <label for="miles">Miles</label>
+                    <input type="text" id="miles" readonly>
+                </div>
+            </div>
+
+
+            <div class="conversion-row">
+                <div>
+                    <label for="meters">Meters</label>
+                    <input type="number" id="meters" step="0.1">
+                </div>
+
+                <div>
+                    <label for="ft">Feet</label>
+                    <input type="text" id="ft" readonly>
+                </div>
+            </div>
+
+
+            <div class="conversion-row">
+                <div>
+                    <label for="cm">Centimeters</label>
+                    <input type="number" id="cm" step="0.1">
+                </div>
+
+                <div>
+                    <label for="in">Inches</label>
+                    <input type="text" id="in" readonly>
+                </div>
+            </div>
+
+
+            <div class="conversion-row">
+                <div>
+                    <label for="kg">Kilograms</label>
+                    <input type="number" id="kg" step="0.1">
+                </div>
+
+                <div>
+                    <label for="pounds">Pounds</label>
+                    <input type="text" id="pounds" readonly>
+                </div>
+            </div>
+
+
+            <div class="conversion-row">
+                <div>
+                    <label for="celsius">Celsius</label>
+                    <input type="number" id="celsius" step="0.1">
+                </div>
+
+                <div>
+                    <label for="f">Fahrenheit</label>
+                    <input type="text" id="f" readonly>
+                </div>
+            </div>
+
+            
+            <div class="conversion-row">
+                <div>
+                    <label for="litres">Litres</label>
+                    <input type="number" id="litres" step="0.1">
+                </div>
+
+                <div>
+                    <label for="gallons">US Gallons</label>
+                    <input type="text" id="gallons" readonly>
+                </div>
+            </div>
+
+
+        </div>
+        <button class="convert-button" 
+        id="convert-button">Convert</button>
     </main>
     
+
     <a href="../index.html" class="home-button">Home</a>
+    <script src="../conversions.js"></script>
+    <script src="../dark-mode.js"></script>
 
 </body>
 </html>

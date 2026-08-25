@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 
+
 <body>
     <main>
         <h1>Shopping</h1>
+
         <div class="calculator">
             <label for="province">Province</label>
             <select id="province">
@@ -27,27 +29,35 @@
                 <option value="PE">Prince Edward Island</option>
             </select>
 
+
             <label for="price">Price ($)</label>
-            <input type="number" id="price" min="0" max="1000000001" step="0.01" placeholder="9.99">
+            <input type="number" id="price" min="0" max="1000000000" 
+            step="0.01" placeholder="9.99">
 
             <label for="discount">Discount (%)</label>
-            <input type="number" id="discount" min="0" max="100" step="0.01" placeholder="20">
+            <input type="number" id="discount" min="0" max="100" 
+            step="0.01" placeholder="20">
         
             <button id="calculate-button">Calculate</button>
             <p id="error-message"></p>
 
+
             <div class="results">
-                <p>Discounted Price: <strong id="discounted-price">$0.00</strong></p>
+                <p>Discounted Price: <strong 
+                    id="discounted-price">$0.00</strong></p>
                 <p>Tax Rate: <strong id="tax-rate">0%</strong></p>
                 <p>Tax: <strong id="tax-amount">$0.00</strong></p>
                 <hr>
-                <p class="final-price">Final Price: <strong id="final-price">$0.00</strong></p>
+                <p class="final-price">Final Price: <strong 
+                    id="final-price">$0.00</strong></p>
             </div>
         </div>
     </main>
     
+
     <a href="../index.html" class="home-button">Home</a>
-    <script src="../script.js"></script>
+    <script src="../shopping.js"></script>
+    <script src="../dark-mode.js"></script>
 
 </body>
 </html>
