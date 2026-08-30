@@ -98,7 +98,7 @@ button:hover {
     box-sizing: border-box;
 }
 
-#calculate-button {
+.calculator #calculate-button {
     width: 100%;
     margin-top: 20px;
 }
@@ -122,7 +122,7 @@ button:hover {
 }
 
 
-/* For conversions page */
+/* Conversions page */
 .conversion-option {
     display: flex;
     justify-content: center;
@@ -178,7 +178,8 @@ body.dark-mode .calculator {
     background-color: #2b2b2b;
 }
 
-body.dark-mode input, body.dark-mode select {
+body.dark-mode input, 
+body.dark-mode select {
     background-color: #5a5a5a;
     color: white;
     border-color: #666666;
@@ -195,4 +196,53 @@ body.dark-mode .conversion-row input[readonly] {
     justify-content: center;
     gap: 50px;
     margin-top: 70px;
+}
+
+
+/* Incomes page */
+.income-option {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.income-option button.active {
+    background-color: #1d4ed8;
+}
+
+.hourly-form, 
+.salary-form {
+    width: 350px;
+    margin: 60px auto 0;
+}
+
+.hourly-form label, 
+.salary-form label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.hourly-form input, 
+.salary-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.income-result {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.calculate-button {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -125px;
 }

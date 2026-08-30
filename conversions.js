@@ -65,11 +65,11 @@ convertButton.addEventListener("click", function () {
     const fahrenheit = document.getElementById("f");
     const gallons = document.getElementById("gallons");
 
+
     if (selectedMode === "") {
         alert("Please select Metric or Imperial first.");
         return;
     }
-
 
     if (selectedMode === "metric") {
         if (km.value === "" && meters.value === "" 
