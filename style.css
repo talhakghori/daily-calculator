@@ -1,16 +1,21 @@
+:root {
+    --text-scale: 1;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    font-size: calc(16px * var(--text-scale));
     background-color: #f2f2f2;
 }
 
 main {
     text-align: center;
-    padding-top: 80px;
+    padding-top: 70px;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: calc(40px * var(--text-scale));
     margin-bottom: 30px;
 }
 
@@ -21,13 +26,13 @@ h1 {
     grid-template-columns: repeat(2, 250px);
     justify-content: center;
     gap: 45px 30px;
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 button {
     width: 250px;
     padding: 15px;
-    font-size: 18px;
+    font-size: calc(18px * var(--text-scale));
     border: none;
     border-radius: 10px;
     background-color: #2563eb;
@@ -40,8 +45,10 @@ button:hover {
 }
 
 .button-container a:last-child {
-    grid-column: 1 / 3;
-    justify-self: center;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -125px;
 }
 
 .home-button {
@@ -54,7 +61,7 @@ button:hover {
     color: white;
     text-decoration: none;
     text-align: center;
-    font-size: 18px;
+    font-size: calc(18px * var(--text-scale));
     border-radius: 10px;
 }
 
@@ -71,7 +78,7 @@ button:hover {
 }
 
 
-/* Calculator for shopping page */
+/* Shopping page */
 .calculator {
     width: 350px;
     margin: 0 auto;
@@ -92,7 +99,7 @@ button:hover {
 .calculator select {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
+    font-size: calc(16px * var(--text-scale));
     border: 1px solid #cccccc;
     border-radius: 8px;
     box-sizing: border-box;
@@ -113,7 +120,7 @@ button:hover {
 }
 
 .final-price {
-    font-size: 20px;
+    font-size: calc(20px * var(--text-scale));
 }
 
 #error-message {
@@ -150,7 +157,7 @@ button:hover {
 .conversion-row input {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    font-size: calc(16px * var(--text-scale));
     border: 1px solid #cccccc;
     border-radius: 8px;
     box-sizing: border-box;
@@ -168,38 +175,7 @@ button:hover {
 }
 
 
-/* Dark mode */
-body.dark-mode {
-    background-color: #1d1d1d;
-    color: white;
-}
-
-body.dark-mode .calculator {
-    background-color: #2b2b2b;
-}
-
-body.dark-mode input, 
-body.dark-mode select {
-    background-color: #5a5a5a;
-    color: white;
-    border-color: #666666;
-}
-
-body.dark-mode .conversion-row input[readonly] {
-    background-color: #4a4a4a;
-}
-
-
-/* Settings page */
-.theme-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 70px;
-}
-
-
-/* Incomes page */
+/* Income page */
 .income-option {
     display: flex;
     justify-content: center;
@@ -228,7 +204,7 @@ body.dark-mode .conversion-row input[readonly] {
 .salary-form input {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
+    font-size: calc(16px * var(--text-scale));
     border: 1px solid #cccccc;
     border-radius: 8px;
     box-sizing: border-box;
@@ -236,7 +212,7 @@ body.dark-mode .conversion-row input[readonly] {
 
 .income-result {
     margin-top: 30px;
-    font-size: 20px;
+    font-size: calc(20px * var(--text-scale));
     font-weight: bold;
 }
 
@@ -245,4 +221,86 @@ body.dark-mode .conversion-row input[readonly] {
     bottom: 25px;
     left: 50%;
     margin-left: -125px;
+}
+
+
+/* Loan page */
+.loan-form {
+    width: 350px;
+    margin: 40px auto 0;
+}
+
+.loan-form label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.loan-form input {
+    width: 100%;
+    padding: 12px;
+    font-size: calc(16px * var(--text-scale));
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.loan-result {
+    margin-top: 30px;
+    font-size: calc(18px * var(--text-scale));
+}
+
+
+/* Settings page */
+.theme-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 70px;
+}
+
+body.dark-mode {
+    background-color: #1d1d1d;
+    color: white;
+}
+
+body.dark-mode .calculator {
+    background-color: #2b2b2b;
+}
+
+body.dark-mode input, 
+body.dark-mode select {
+    background-color: #5a5a5a;
+    color: white;
+    border-color: #666666;
+}
+
+body.dark-mode .conversion-row input[readonly] {
+    background-color: #4a4a4a;
+}
+
+.text-setting {
+    width: 350px;
+    margin: 50px auto 0;
+}
+
+.text-setting label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: calc(18px * var(--text-scale));
+}
+
+.text-slider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.text-slider input {
+    flex: 1;
+}
+
+#text-value {
+    margin-top: 10px;
 }

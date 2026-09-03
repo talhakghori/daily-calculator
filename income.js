@@ -17,6 +17,7 @@ hourlyForm.style.display = "none";
 salaryForm.style.display = "none";
 
 
+// Let the user switch between hourly and salary options
 hourlyButton.addEventListener("click", function () {
     incomeType = "hourly";
     hourlyButton.classList.add("active");
@@ -37,6 +38,8 @@ salaryButton.addEventListener("click", function () {
     incomeResult.textContent = "";
 });
 
+
+// Validate user input and calculate income
 calculateButton.addEventListener("click", function () {
     if (incomeType === "") {
         incomeResult.textContent = 
@@ -62,6 +65,7 @@ calculateButton.addEventListener("click", function () {
             return;
         }
 
+        // 24 times 7 is 168 hours
         if (hours < 1 || hours > 168) {
             incomeResult.textContent = 
             "Hours worked must be between 1 and 168.";
@@ -75,9 +79,9 @@ calculateButton.addEventListener("click", function () {
             minimumFractionDigits: 2, 
             maximumFractionDigits: 2
         });
-    }
 
-    if (incomeType === "salary") {
+        
+    } else if (incomeType === "salary") {
 
         const annualSalary = Number(salary.value);
         
@@ -93,6 +97,7 @@ calculateButton.addEventListener("click", function () {
             return;
         }
 
+        // Assumes a standard 40 hour work week and 52 weeks per year
         const hourlyRate = annualSalary / (40 * 52);
 
         incomeResult.textContent = "Hourly Rate: $" +

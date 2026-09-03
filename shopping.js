@@ -3,6 +3,7 @@ const price = document.getElementById("price");
 const discount = document.getElementById("discount");
 const calculateButton = document.getElementById("calculate-button");
 const discountedPriceOutput = document.getElementById("discounted-price");
+
 const taxRateOutput = document.getElementById("tax-rate");
 const taxAmountOutput = document.getElementById("tax-amount");
 const finalPriceOutput = document.getElementById("final-price");

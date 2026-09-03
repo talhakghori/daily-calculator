@@ -49,7 +49,7 @@ function setImperialMode() {
 }
 
 
-// Converts all entered values
+// Convert all entered values
 convertButton.addEventListener("click", function () {
     const km = document.getElementById("km");
     const meters = document.getElementById("meters");
