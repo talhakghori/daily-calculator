@@ -10,31 +10,48 @@
 </head>
 
 
-<body>
+<body data-title-key="settings">
     <main>
-        <h1>Settings</h1>
+        <h1 data-translate="settings">Settings</h1>
         
         <div class="theme-buttons">
-            <button type="button" id="light-button">Light</button>
-            <button type="button" id="dark-button">Dark</button>
+            <button type="button" id="light-button"
+            data-translate="light">Light</button>
+
+            <button type="button" id="dark-button"
+            data-translate="dark">Dark</button>
         </div>
 
 
         <div class="text-setting">
-            <label for="text-size">Text Size</label>
+            <label for="text-size" data-translate="textSize">
+                Text Size</label>
             
+
             <div class="text-slider">
-                <span>Small</span>
+                <span data-translate="small">Small</span>
                 <input type="range" id="text-size" min="90" 
                 max="110" step="5" value="100">
-                <span>Large</span>
+                <span data-translate="large">Large</span>
             </div>
 
+            
             <p id="text-value">100%</p>
+        </div>
+
+
+        <div class="language-setting">
+            <p data-translate="language">Language</p>
+
+            <button type="button" id="en-button">English</button>
+            <button type="button" id="fr-button">Français</button>
         </div>
     </main>
     
-    <a href="../index.html" class="home-button">Home</a>
+
+    <a href="../index.html" class="home-button"
+    data-translate="home">Home</a>
+
     <script src="../settings.js"></script>
 
 </body>

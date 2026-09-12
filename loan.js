@@ -6,7 +6,7 @@ const calculateButton = document.getElementById("calculate-button");
 const loanResult = document.getElementById("loan-result");
 
 
-// Ensures valid input from user to calculate loan payments
+// Validate user input and calculate loan payments
 calculateButton.addEventListener("click", function () { 
     const principal = Number(loanAmount.value);
     const annualRate = Number(interestRate.value);
@@ -14,26 +14,22 @@ calculateButton.addEventListener("click", function () {
 
     if (loanAmount.value === "" || interestRate.value === "" || 
         loanTerm.value === "") {
-        loanResult.textContent = 
-        "Please fill in all required fields.";
+        loanResult.textContent = translate("requiredFields");
         return;
     }
 
     if (principal < 1 || principal > 1000000000) {
-        loanResult.textContent = 
-        "Loan amount must be between $1 and 1 billion.";
+        loanResult.textContent = translate("loanAmountError");
         return;
     }
 
     if (annualRate < 0 || annualRate > 100) {
-        loanResult.textContent = 
-        "Interest rate must be between 0% and 100%.";
+        loanResult.textContent = translate("interestRateError");
         return;
     }
 
     if (years < 1 || years > 100) {
-        loanResult.textContent =
-        "Loan term must be between 1 and 100 years.";
+        loanResult.textContent = translate("loanTermError");
         return;
     }
 
@@ -60,15 +56,12 @@ calculateButton.addEventListener("click", function () {
     const totalInterest = totalPaid - principal;
 
     loanResult.innerHTML = 
-    "Monthly Payment: $" + monthlyPayment.toLocaleString("en-CA", {
-        minimumFractionDigits: 2, maximumFractionDigits: 2
-    }) + "<br><br>" +
+    translate("monthlyPayment") + " " + 
+    formatCurrency(monthlyPayment) + "<br><br>" +
 
-    "Total Interest: $" + totalInterest.toLocaleString("en-CA", {
-        minimumFractionDigits: 2, maximumFractionDigits: 2
-    }) + "<br><br>" +
+    translate("totalInterest") + " " + 
+    formatCurrency(totalInterest) + "<br><br>" +
 
-    "Total Amount Paid: $" + totalPaid.toLocaleString("en-CA", {
-        minimumFractionDigits: 2, maximumFractionDigits: 2
-    });
+    translate("totalPaid") + " " + 
+    formatCurrency(totalPaid);
 });

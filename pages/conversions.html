@@ -10,27 +10,31 @@
 </head>
 
 
-<body>
+<body data-title-key="conversionsTitle">
     <main>
-        <h1>Conversions</h1>
+        <h1 data-translate="conversionsTitle">Conversions</h1>
 
         <div class="conversion-option">
-            <button type="button" id="metric-button">Metric</button>
-            <button type="button" id="imperial-button">Imperial</button>
+            <button type="button" id="metric-button"
+            data-translate="metric">Metric</button>
+
+            <button type="button" id="imperial-button"
+            data-translate="imperial">Imperial</button>
         </div>
 
 
-        <!-- Unit conversion inputs and outputs -->
         <div class="conversion-table">
 
             <div class="conversion-row">
                 <div>
-                    <label for="km">Kilometers</label>
+                    <label for="km" data-translate="kilometers">
+                        Kilometers</label>
                     <input type="number" id="km" step="0.1">
                 </div>
 
                 <div>
-                    <label for="miles">Miles</label>
+                    <label for="miles" data-translate="miles">
+                        Miles</label>
                     <input type="text" id="miles" readonly>
                 </div>
             </div>
@@ -38,12 +42,14 @@
 
             <div class="conversion-row">
                 <div>
-                    <label for="meters">Meters</label>
+                    <label for="meters" data-translate="meters">
+                        Meters</label>
                     <input type="number" id="meters" step="0.1">
                 </div>
 
                 <div>
-                    <label for="ft">Feet</label>
+                    <label for="ft" data-translate="feet">
+                        Feet</label>
                     <input type="text" id="ft" readonly>
                 </div>
             </div>
@@ -51,12 +57,14 @@
 
             <div class="conversion-row">
                 <div>
-                    <label for="cm">Centimeters</label>
+                    <label for="cm" data-translate="centimeters">
+                        Centimeters</label>
                     <input type="number" id="cm" step="0.1">
                 </div>
 
                 <div>
-                    <label for="in">Inches</label>
+                    <label for="in" data-translate="inches">
+                        Inches</label>
                     <input type="text" id="in" readonly>
                 </div>
             </div>
@@ -64,12 +72,14 @@
 
             <div class="conversion-row">
                 <div>
-                    <label for="kg">Kilograms</label>
+                    <label for="kg" data-translate="kilograms">
+                        Kilograms</label>
                     <input type="number" id="kg" step="0.1">
                 </div>
 
                 <div>
-                    <label for="pounds">Pounds</label>
+                    <label for="pounds" data-translate="pounds">
+                        Pounds</label>
                     <input type="text" id="pounds" readonly>
                 </div>
             </div>
@@ -77,12 +87,14 @@
 
             <div class="conversion-row">
                 <div>
-                    <label for="celsius">Celsius</label>
+                    <label for="celsius" data-translate="celsius">
+                        Celsius</label>
                     <input type="number" id="celsius" step="0.1">
                 </div>
 
                 <div>
-                    <label for="f">Fahrenheit</label>
+                    <label for="f" data-translate="fahrenheit">
+                        Fahrenheit</label>
                     <input type="text" id="f" readonly>
                 </div>
             </div>
@@ -90,12 +102,14 @@
             
             <div class="conversion-row">
                 <div>
-                    <label for="litres">Litres</label>
+                    <label for="litres" data-translate="litres">
+                        Litres</label>
                     <input type="number" id="litres" step="0.1">
                 </div>
 
                 <div>
-                    <label for="gallons">US Gallons</label>
+                    <label for="gallons" data-translate="gallons">
+                        US Gallons</label>
                     <input type="text" id="gallons" readonly>
                 </div>
             </div>
@@ -103,13 +117,16 @@
 
         </div>
         <button type="button" class="convert-button" 
-        id="convert-button">Convert</button>
+        id="convert-button" data-translate="convert">
+        Convert</button>
     </main>
     
 
-    <a href="../index.html" class="home-button">Home</a>
-    <script src="../conversions.js"></script>
+    <a href="../index.html" class="home-button" 
+    data-translate="home">Home</a>
+
     <script src="../settings.js"></script>
+    <script src="../conversions.js"></script>
 
 </body>
 </html>

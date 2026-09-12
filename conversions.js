@@ -67,15 +67,15 @@ convertButton.addEventListener("click", function () {
 
 
     if (selectedMode === "") {
-        alert("Please select Metric or Imperial first.");
+        alert(translate("selectConversion"));
         return;
     }
-
+    
     if (selectedMode === "metric") {
         if (km.value === "" && meters.value === "" 
             && cm.value === "" && kg.value === "" 
             && celsius.value === "" && litres.value === "") {
-            alert("Please enter at least one value.");
+            alert(translate("enterValue"));
             return;
         }
 
@@ -109,7 +109,7 @@ convertButton.addEventListener("click", function () {
         if (miles.value === "" && feet.value === "" 
             && inches.value === "" && pounds.value === "" 
             && fahrenheit.value === "" && gallons.value === "") {
-            alert("Please enter at least one value.");
+            alert(translate("enterValue"));
             return;
         }
 

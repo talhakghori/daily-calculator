@@ -3,34 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
     <title>Daily Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 
-<body>
+<body data-title-key="dailyCalculator">
     <main>
-        <h1>Daily Calculator</h1>
+        <h1 data-translate="dailyCalculator">
+            Daily Calculator</h1>
 
         <div class="button-container">
-            <a href="pages/shopping.html">
-                <button>Shopping</button></a>
 
-            <a href="pages/income.html">
-                <button>Pay / Income</button></a>
+            <a href="pages/shopping.html"
+                data-translate="shopping">
+                    Shopping</a>
 
-            <a href="pages/conversions.html">
-                <button>Metric to Imperial</button></a>
+            <a href="pages/income.html"
+                data-translate="income">
+                    Pay / Income</a>
 
-            <a href="pages/loan.html">
-                <button>Loan / Payment</button></a>
+            <a href="pages/conversions.html"
+                data-translate="conversions">
+                    Metric to Imperial</a>
 
-            <a href="pages/settings.html">
-                <button class="settings-button">Settings</button></a>
+            <a href="pages/loan.html"
+                data-translate="loan">
+                    Loan / Payment</a>
 
+            <a href="pages/settings.html"
+                class="settings-button" 
+                data-translate="settings">
+                    Settings</a>
         </div>
     </main>
+
+
     <script src="settings.js"></script>
 
 </body>

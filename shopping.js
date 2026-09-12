@@ -1,13 +1,20 @@
 const province = document.getElementById("province");
 const price = document.getElementById("price");
 const discount = document.getElementById("discount");
+
 const calculateButton = document.getElementById("calculate-button");
 const discountedPriceOutput = document.getElementById("discounted-price");
 
 const taxRateOutput = document.getElementById("tax-rate");
 const taxAmountOutput = document.getElementById("tax-amount");
+
 const finalPriceOutput = document.getElementById("final-price");
 const errorMessage = document.getElementById("error-message");
+
+
+discountedPriceOutput.textContent = formatCurrency(0);
+taxAmountOutput.textContent = formatCurrency(0);
+finalPriceOutput.textContent = formatCurrency(0);
 
 
 // Provincial sales tax rates
@@ -26,18 +33,18 @@ function calculateShoppingTotal() {
     errorMessage.textContent = "";
 
     if (selectedProvince === "") {
-        errorMessage.textContent = "Please select a province.";
+        errorMessage.textContent = translate("selectProvinceError");
         return; 
     }
     
     if (price.value === "" || originalPrice < 0 || 
         originalPrice > 1000000000) {
-        errorMessage.textContent = "Price must be between 0 and 1 billion";
+        errorMessage.textContent = translate("priceError");
         return; 
     }
     
     if (discountPercent < 0 || discountPercent > 100) {
-        errorMessage.textContent = "Discount must be between 0 and 100.";
+        errorMessage.textContent = translate("discountError");
         return; 
     }
 
@@ -45,14 +52,15 @@ function calculateShoppingTotal() {
     // Apply discount and provincial tax
     const taxRate = taxRates[selectedProvince];
     const discountedPrice = originalPrice * (1 - discountPercent / 100);
+
     const taxAmount = discountedPrice * taxRate;
     const finalPrice = discountedPrice + taxAmount;
 
-    discountedPriceOutput.textContent = `$${discountedPrice.toFixed(2)}`;
-    taxRateOutput.textContent = 
-        `${(taxRate * 100).toFixed(3).replace(/\.?0+$/, "")}%`;
-    taxAmountOutput.textContent = `$${taxAmount.toFixed(2)}`;
-    finalPriceOutput.textContent = `$${finalPrice.toFixed(2)}`;
+    
+    discountedPriceOutput.textContent = formatCurrency(discountedPrice);
+    taxRateOutput.textContent = formatPercent(taxRate);
+    taxAmountOutput.textContent = formatCurrency(taxAmount);
+    finalPriceOutput.textContent = formatCurrency(finalPrice);
 }
 
 calculateButton.addEventListener("click", calculateShoppingTotal);

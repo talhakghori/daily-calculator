@@ -10,41 +10,56 @@
 </head>
 
 
-<body>
+<body data-title-key="incomeTitle">
     <main>
-        <h1>Income</h1>
+        <h1 data-translate="incomeTitle">Income</h1>
 
         <div class="income-option">
-            <button type="button" id="hourly-button">Hourly</button>
-            <button type="button" id="salary-button">Salary</button>
+            <button type="button" id="hourly-button"
+            data-translate="hourly">Hourly</button>
+
+            <button type="button" id="salary-button"
+            data-translate="salary">Salary</button>
         </div>
 
+
         <div class="hourly-form" id="hourly-form">
-            <label for="hourly-wage">Hourly Wage</label>
+            <label for="hourly-wage" data-translate="hourlyWage">
+                Hourly Wage</label>
+
             <input type="number" id="hourly-wage" min="1" 
             max="1000000" step="0.01">
 
-            <label for="hours-worked">Hours Worked Per Week</label>
+            <label for="hours-worked" data-translate="hoursWorked">
+                Hours Worked Per Week</label>
+
             <input type="number" id="hours-worked" min="1" 
             max="168" step="0.25">
         </div>
 
+
         <div class="salary-form" id="salary-form">
-            <label for="salary">Salary</label>
+            <label for="salary" data-translate="salary">
+                Salary</label>
+
             <input type="number" id="salary" min="1" 
             max="1000000000" step="0.01">
         </div>
 
+        
         <div class="income-result" id="income-result"></div>
 
         <button type="button" class="calculate-button" 
-        id="calculate-button">Calculate</button>
+        id="calculate-button" data-translate="calculate">
+            Calculate</button>
     </main>
     
 
-    <a href="../index.html" class="home-button">Home</a>
-    <script src="../income.js"></script>
+    <a href="../index.html" class="home-button" 
+    data-translate="home">Home</a>
+
     <script src="../settings.js"></script>
+    <script src="../income.js"></script>
 
 </body>
 </html>

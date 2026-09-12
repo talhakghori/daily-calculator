@@ -10,55 +10,105 @@
 </head>
 
 
-<body>
+<body data-title-key="shopping">
     <main>
-        <h1>Shopping</h1>
+        <h1 data-translate="shopping">Shopping</h1>
 
         <div class="calculator">
-            <label for="province">Province</label>
+            <label for="province" data-translate="province">
+                Province</label>
+
             <select id="province">
-                <option value="">Select a province</option>
-                <option value="BC">British Columbia</option>
-                <option value="AB">Alberta</option>
-                <option value="SK">Saskatchewan</option>
-                <option value="MB">Manitoba</option>
-                <option value="ON">Ontario</option>
-                <option value="QC">Quebec</option>
-                <option value="NB">New Brunswick</option>
-                <option value="NL">Newfoundland</option>
-                <option value="NS">Nova Scotia</option>
-                <option value="PE">Prince Edward Island</option>
+                <option value="" data-translate="selectProvince">
+                    Select a province</option>
+
+                <option value="BC" data-translate="britishColumbia">
+                    British Columbia</option>
+
+                <option value="AB" data-translate="alberta">
+                    Alberta</option>
+
+                <option value="SK" data-translate="saskatchewan">
+                    Saskatchewan</option>
+
+                <option value="MB" data-translate="manitoba">
+                    Manitoba</option>
+
+                <option value="ON" data-translate="ontario">
+                    Ontario</option>
+
+                <option value="QC" data-translate="quebec">
+                    Quebec</option>
+
+                <option value="NB" data-translate="newBrunswick">
+                    New Brunswick</option>
+
+                <option value="NL" data-translate="newfoundland">
+                    Newfoundland and Labrador</option>
+
+                <option value="NS" data-translate="novaScotia">
+                    Nova Scotia</option>
+
+                <option value="PE" data-translate="princeEdwardIsland">
+                    Prince Edward Island</option>
             </select>
 
 
-            <label for="price">Price ($)</label>
+            <label for="price" data-translate="price">
+                Price ($)</label>
+
             <input type="number" id="price" min="0" max="1000000000" 
             step="0.01" placeholder="9.99">
 
-            <label for="discount">Discount (%)</label>
+
+            <label for="discount" data-translate="discount">
+                Discount (%)</label>
+
             <input type="number" id="discount" min="0" max="100" 
             step="0.01" placeholder="20">
         
-            <button type="button" id="calculate-button">Calculate</button>
+
+            <button type="button" id="calculate-button"
+            data-translate="calculate">Calculate</button>
             <p id="error-message"></p>
 
 
             <div class="results">
-                <p>Discounted Price: <strong 
-                    id="discounted-price">$0.00</strong></p>
-                <p>Tax Rate: <strong id="tax-rate">0%</strong></p>
-                <p>Tax: <strong id="tax-amount">$0.00</strong></p>
+                <p>
+                    <span data-translate="discountedPrice">
+                    Discounted Price:</span>
+                    <strong id="discounted-price">$0.00</strong>
+                </p>
+
+                <p>
+                    <span data-translate="taxRate">
+                    Tax Rate:</span>
+                    <strong id="tax-rate">0%</strong>
+                </p>
+                
+                <p>
+                    <span data-translate="tax">
+                    Tax:</span>
+                    <strong id="tax-amount">$0.00</strong>
+                </p>
+
                 <hr>
-                <p class="final-price">Final Price: <strong 
-                    id="final-price">$0.00</strong></p>
+                
+                <p class="final-price">
+                    <span data-translate="finalPrice">
+                    Final Price:</span>
+                    <strong id="final-price">$0.00</strong>
+                </p>
             </div>
         </div>
     </main>
     
 
-    <a href="../index.html" class="home-button">Home</a>
+    <a href="../index.html" class="home-button"
+    data-translate="home">Home</a>
+
+    <script src="../settings.js"></script>    
     <script src="../shopping.js"></script>
-    <script src="../settings.js"></script>
 
 </body>
 </html>
