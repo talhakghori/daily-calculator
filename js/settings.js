@@ -11,11 +11,11 @@ const frButton = document.getElementById("fr-button");
 // English and Canadian French translations
 const translation = {
     en: {
-        home: "Home", settings: "Settings", light: "Light", 
+        settings: "Settings", light: "Light", 
         dark: "Dark", textSize: "Text Size", small: "Small",
         large: "Large", language: "Language",
         dailyCalculator: "Daily Calculator", shopping: "Shopping",
-        income: "Pay / Income", conversions: "Metric to Imperial",
+        income: "Pay / Income", conversions: "Metric & Imperial",
         loan: "Loan / Payment", province: "Province",
         selectProvince: "Select a province", price: "Price ($)",
         discount: "Discount (%)", calculate: "Calculate",
@@ -60,11 +60,11 @@ const translation = {
     },
 
     fr: {
-        home: "Accueil", settings: "Paramètres", light: "Clair",
+        settings: "Paramètres", light: "Clair",
         dark: "Sombre", textSize: "Taille du texte", small: "Petit",
         large: "Grand", language: "Langue",
         dailyCalculator: "Calculateur quotidien", shopping: "Magasinage",
-        income: "Paie / revenu", conversions: "Métrique vers impérial",
+        income: "Paie / revenu", conversions: "Métrique et impérial",
         loan: "Prêt / paiement", province: "Province",
         selectProvince: "Sélectionnez une province", price: "Prix ($)",
         discount: "Rabais (%)", calculate: "Calculer",

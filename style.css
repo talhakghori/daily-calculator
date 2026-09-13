@@ -47,37 +47,43 @@ button:hover, .button-container a:hover {
     background-color: #1d4ed8;
 }
 
-.button-container a:last-child {
+.button-container .settings-button {
     position: fixed;
     bottom: 25px;
     left: 50%;
-    margin-left: -125px;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    background-color: #5d5d5d;
+}
+
+.button-container .settings-button:hover {
+    background-color: #515151;
 }
 
 .home-button {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    width: 120px;
+    width: 60px;
+    height: 60px;
     padding: 15px;
     background-color: #2563eb;
-    color: white;
     text-decoration: none;
     text-align: center;
-    font-size: calc(18px * var(--text-scale));
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .home-button:hover {
     background-color: #1d4ed8;
 }
 
-.button-container .settings-button {
-    background-color: #5d5d5d;
-}
-
-.button-container .settings-button:hover {
-    background-color: #515151;
+.home-button img, .settings-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
