@@ -353,4 +353,19 @@ body.dark-mode .conversion-row input[readonly] {
     .theme-buttons button {
         width: 160px;
     }
+
+    .convert-button, .calculate-button, 
+    .calculator #calculate-button {
+        width: 160px;
+    }
+
+    .convert-button, .calculate-button {
+        margin-left: -80px;
+    }
+
+    .calculator #calculate-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

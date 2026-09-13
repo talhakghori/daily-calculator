@@ -2,6 +2,10 @@
 This is a simple web application built using HTML, CSS, and JavaScript.
 
 
+## Live Demo
+https://talhakghori.github.io/daily-calculator/
+
+
 ## Features
 
 - Home Page
@@ -29,9 +33,6 @@ This is a simple web application built using HTML, CSS, and JavaScript.
 - Settings Page: The user can select either Light or Dark mode for all pages. The text size can be adjusted from 90% to 110%. The application can also be switched between English and French.
 
 ![Settings Page](images/settingsPage.png)
-
-
-## Live Demo
 
 
 ## Author
